@@ -1,0 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 20 43% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 60 9% 95%;
+    --secondary-foreground: 24 6% 40%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 20 43% 95%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 20 6% 90%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 20 43% 60%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-boutique-taupe text-white px-6 py-3 rounded-sm hover:bg-boutique-navy transition-colors duration-300 font-medium;
+  }
+  
+  .btn-outline {
+    @apply border border-boutique-taupe text-boutique-taupe px-6 py-3 rounded-sm hover:bg-boutique-taupe hover:text-white transition-colors duration-300 font-medium;
+  }
+  
+  .container-custom {
+    @apply px-4 md:px-8 max-w-7xl mx-auto;
+  }
+  
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-24;
+  }
+  
+  .heading-xl {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-medium;
+  }
+  
+  .heading-lg {
+    @apply font-serif text-3xl md:text-4xl font-medium;
+  }
+  
+  .heading-md {
+    @apply font-serif text-2xl md:text-3xl font-medium;
+  }
+  
+  .heading-sm {
+    @apply font-serif text-xl md:text-2xl font-medium;
+  }
+}
